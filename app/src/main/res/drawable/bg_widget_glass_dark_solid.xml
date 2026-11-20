@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Frosted body, near-opaque for Stack mode -->
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="270"
+                android:endColor="@color/glass_bottom_dark_solid"
+                android:startColor="@color/glass_top_dark_solid"
+                android:type="linear" />
+            <corners android:radius="@dimen/glass_corner" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Android 12+: match the launcher's widget corner radius so borderless cards blend with the home screen. -->
+<resources>
+    <dimen name="eink_card_corner">@android:dimen/system_app_widget_background_radius</dimen>
+    <dimen name="swiss_corner">@android:dimen/system_app_widget_background_radius</dimen>
+    <dimen name="glass_corner">@android:dimen/system_app_widget_background_radius</dimen>
+    <dimen name="dot_corner">@android:dimen/system_app_widget_background_radius</dimen>
+    <dimen name="almanac_corner">@android:dimen/system_app_widget_background_radius</dimen>
+</resources>

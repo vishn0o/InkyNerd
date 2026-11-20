@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- E-Ink Paper -->
+    <color name="ink_background">#F4F1EA</color>
+    <color name="ink_surface">#EBE7DE</color>
+    <color name="ink_primary">#141414</color>
+    <color name="ink_secondary">#4A4A4A</color>
+    <color name="ink_border">#141414</color>
+    <color name="launcher_background">#F4F1EA</color>
+    <color name="launcher_foreground">#141414</color>
+
+    <!-- ===== Widget: Classic E-Ink (explicit variants; forced Light/Dark) ===== -->
+    <color name="eink_surface_light">#EBE7DE</color>
+    <color name="eink_ink_light">#141414</color>
+    <color name="eink_ink2_light">#4A4A4A</color>
+    <color name="eink_surface_dark">#1C1C1C</color>
+    <color name="eink_ink_dark">#E6E3DC</color>
+    <color name="eink_ink2_dark">#9E9B95</color>
+
+    <!-- ===== Widget: Swiss Alabaster ===== -->
+    <color name="swiss_card_light">#F6F8FB</color>
+    <color name="swiss_pill_light">#EBF0F6</color>
+    <color name="swiss_ink_light">#111827</color>
+    <color name="swiss_ink2_light">#64748B</color>
+    <color name="swiss_card_dark">#14171D</color>
+    <color name="swiss_pill_dark">#1E232B</color>
+    <color name="swiss_ink_dark">#F1F5F9</color>
+    <color name="swiss_ink2_dark">#94A3B8</color>
+
+    <!-- ===== Widget: Frosted Glass ===== -->
+    <color name="glass_top_light">#CCF8FAFC</color>
+    <color name="glass_bottom_light">#B3EEF2F7</color>
+    <color name="glass_pill_light">#4DFFFFFF</color>
+    <color name="glass_ink_light">#0F172A</color>
+    <color name="glass_ink2_light">#334155</color>
+    <color name="glass_top_dark">#BF11151C</color>
+    <color name="glass_bottom_dark">#A60B0E14</color>
+    <color name="glass_pill_dark">#1FFFFFFF</color>
+    <color name="glass_ink_dark">#F8FAFC</color>
+    <color name="glass_ink2_dark">#CBD5E1</color>
+
+    <!-- Dot Matrix (Nothing-inspired): monochrome, one red accent. -->
+    <color name="dot_card_dark">#000000</color>
+    <color name="dot_ink_dark">#FFFFFF</color>
+    <color name="dot_ink2_dark">#8C8C8C</color>
+    <color name="dot_line_dark">#3A3A3A</color>
+    <color name="dot_card_light">#F4F4F2</color>
+    <color name="dot_ink_light">#111111</color>
+    <color name="dot_ink2_light">#6E6E6E</color>
+    <color name="dot_line_light">#CFCFCB</color>
+    <color name="dot_accent">#D71921</color>
+
+    <!-- Almanac: warm paper, bold book serif, black date-style highlight. -->
+    <color name="alm_card_light">#EAE4DA</color>
+    <color name="alm_ink_light">#1C1A18</color>
+    <color name="alm_ink2_light">#8C867E</color>
+    <color name="alm_card_dark">#23211E</color>
+    <color name="alm_ink_dark">#EDE6DB</color>
+    <color name="alm_ink2_dark">#8F887E</color>
+
+    <!-- Frosted Glass, Stack mode: fully opaque frost tint so the cards behind can't show through. -->
+    <color name="glass_top_light_solid">#FFF5F7FA</color>
+    <color name="glass_bottom_light_solid">#FFE9EEF4</color>
+    <color name="glass_top_dark_solid">#FF161B24</color>
+    <color name="glass_bottom_dark_solid">#FF0E1218</color>
+</resources>

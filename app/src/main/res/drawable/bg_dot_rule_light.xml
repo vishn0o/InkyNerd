@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dotted divider: a tiny dot tile repeated across the card. -->
+<bitmap xmlns:android="http://schemas.android.com/apk/res/android"
+    android:src="@drawable/widget_dot_tile_light"
+    android:tileMode="repeat" />

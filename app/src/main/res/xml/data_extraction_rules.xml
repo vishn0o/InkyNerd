@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <include domain="database" path="wikiink.db" />
+        <!-- Room runs in WAL mode: without these a restore can miss recent writes. -->
+        <include domain="database" path="wikiink.db-wal" />
+        <include domain="database" path="wikiink.db-shm" />
+        <include domain="sharedpref" path="reader_prefs.xml" />
+    </cloud-backup>
+</data-extraction-rules>

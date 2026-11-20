@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">InkyNerd</string>
+    <string name="widget_label">InkyNerd Facts</string>
+    <string name="widget_description">Niche Wikipedia trivia and nerdy facts, in five styles.</string>
+    <string name="widget_refresh">↻</string>
+    <string name="widget_refresh_desc">Refresh facts</string>
+    <string name="widget_next">›</string>
+    <string name="widget_next_labeled">NEXT ›</string>
+    <string name="widget_next_desc">Next fact</string>
+    <string name="widget_topic_toast">Topic: %1$s</string>
+    <string name="widget_hint_topic">▲ TAP · TOPIC</string>
+    <string name="widget_hint_swipe">▲ SWIPE UP ▲</string>
+    <string name="widget_hint_next">NEXT ▶</string>
+    <string name="widget_label_compact">InkyNerd Facts · Compact</string>
+    <string name="widget_label_large">InkyNerd Facts · Large</string>
+    <string name="widget_empty_title">ARCHIVE EMPTY</string>
+    <string name="widget_empty_body">Fetching nerdy facts… tap to open InkyNerd.</string>
+    <string name="widget_loading">LOADING…</string>
+    <string name="widget_bookmark">Save or unsave</string>
+    <string name="widget_bookmarked">Saved. Tap to remove</string>
+    <string name="widget_bookmark_saved">Saved to %1$s</string>
+    <string name="widget_bookmark_removed">Removed from %1$s</string>
+    <string name="widget_bookmark_failed">Could not save bookmark</string>
+    <string name="widget_preview_category">DID YOU KNOW</string>
+    <string name="widget_preview_hook">… that the “Bloop” was an ultra-low-frequency underwater sound later attributed to icequakes?</string>
+    <string name="widget_preview_title">→ Bloop</string>
+</resources>

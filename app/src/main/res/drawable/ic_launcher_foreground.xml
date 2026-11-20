@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- Bordered page -->
+    <path android:fillColor="@android:color/transparent" android:strokeColor="@color/launcher_foreground"
+        android:strokeWidth="3" android:pathData="M36,30h36a4,4 0,0 1,4 4v40a4,4 0,0 1,-4 4h-36a4,4 0,0 1,-4 -4v-40a4,4 0,0 1,4 -4z" />
+    <!-- Text lines -->
+    <path android:fillColor="@color/launcher_foreground" android:pathData="M40,40h28v3h-28z" />
+    <path android:fillColor="@color/launcher_foreground" android:pathData="M40,48h28v2h-28z" />
+    <path android:fillColor="@color/launcher_foreground" android:pathData="M40,54h22v2h-22z" />
+    <path android:fillColor="@color/launcher_foreground" android:pathData="M40,60h26v2h-26z" />
+    <!-- Bookmark ribbon -->
+    <path android:fillColor="@color/launcher_foreground" android:pathData="M58,66h8v12l-4,-3l-4,3z" />
+</vector>
