@@ -196,4 +196,18 @@ class WikiTextTest {
         assertEquals("Lelchuk (Russian: X; born 1929) is", WikiText.tidyLine("Lelchuk (Russian: X; born 1929) is"))
         assertEquals("Historic site in Brighton and Hove, United Kingdom", WikiText.tidyLine("Historic site in Brighton and Hove , United Kingdom"))
     }
+
+    @Test
+    fun wordCount_handlesPunctuationAndHyphens() {
+        assertEquals(0, WikiText.wordCount("   "))
+        assertEquals(3, WikiText.wordCount("A well-known fact!"))
+        assertEquals(4, WikiText.wordCount("It's 2026 — déjà vu."))
+    }
+
+    @Test
+    fun readingMinutes_roundsUpAndNeverReturnsZero() {
+        assertEquals(1, WikiText.readingMinutes("", wordsPerMinute = 220))
+        assertEquals(1, WikiText.readingMinutes("word ".repeat(220), wordsPerMinute = 220))
+        assertEquals(2, WikiText.readingMinutes("word ".repeat(221), wordsPerMinute = 220))
+    }
 }

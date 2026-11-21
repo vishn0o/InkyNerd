@@ -115,6 +115,17 @@ object WikiText {
         return out.mapIndexed { i, f -> f.copy(fetchedAt = newestTime - i) }
     }
 
+    private val WORD = Regex("""[\p{L}\p{N}]+(?:['’\-][\p{L}\p{N}]+)*""")
+
+    /** Approximate word count used for the reader's reading-time estimate. */
+    fun wordCount(text: String): Int = WORD.findAll(text).count()
+
+    /** Reading time in whole minutes, rounded up, for [text] at [wordsPerMinute]. */
+    fun readingMinutes(text: String, wordsPerMinute: Int = 220): Int {
+        val wpm = wordsPerMinute.coerceAtLeast(1)
+        return ((wordCount(text) + wpm - 1) / wpm).coerceAtLeast(1)
+    }
+
     /** Trims to [max] chars on a word boundary, adding an ellipsis when cut. */
     fun trimHook(raw: String, max: Int = HOOK_MAX): String {
         val s = WS.replace(raw, " ").trim()

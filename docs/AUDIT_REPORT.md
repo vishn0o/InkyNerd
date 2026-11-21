@@ -37,7 +37,7 @@ Already good (no change): MVVM with sealed `ReaderUiState`; StateFlow + `stateIn
 | User-Agent hard-coded "1.0". | Uses `BuildConfig.VERSION_NAME`. |
 
 ### Lint (85 → ~50)
-Fixed: UseKtx ×15 (`SharedPreferences.edit {}`, `createBitmap`, `toUri`), UnusedResources ×14 (colors/dimens/strings removed; 3 drawables moved to `_to_delete/`), ContentDescription ×8 (drawn-text twins), RtlSymmetry ×5, ObsoleteSdkInt (`mipmap-anydpi-v26` → `mipmap-anydpi`).
+Fixed: UseKtx ×15 (`SharedPreferences.edit {}`, `createBitmap`, `toUri`), UnusedResources ×14 (colors/dimens/strings and 3 drawables removed), ContentDescription ×8 (drawn-text twins), RtlSymmetry ×5, ObsoleteSdkInt (`mipmap-anydpi-v26` → `mipmap-anydpi`). Also removed 4 dead widget drawables (`widget_bg_border*`, `widget_item_bg*`) that referenced colors deleted in that pass and broke resource linking.
 Left deliberately: dependency/AGP/targetSdk version notices (upgrade as a separate, tested change), UnusedAttribute (API-31 widget attributes, ignored safely on older OS), SmallSp (10 sp chips are a design choice), UselessParent in the widget container (restructuring risks the launcher-specific Stack layout).
 
 ### Edge cases verified by tests

@@ -21,6 +21,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.flow.filterIsInstance
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flatMapLatest
@@ -63,6 +64,7 @@ class ReaderViewModel(
 
     val fontSize: StateFlow<ReaderFontSize> = prefs.fontSize
     val typeface: StateFlow<ReaderTypeface> = prefs.typeface
+    val refreshFlash: StateFlow<Boolean> = prefs.refreshFlash
 
     val folders: StateFlow<List<FolderEntity>> = repository.observeFolders()
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), emptyList())
@@ -84,6 +86,13 @@ class ReaderViewModel(
     /** Prev / Next are usable once there's more than one fact to move between. */
     val canStep: StateFlow<Boolean> = deck.map { it.size > 1 }
         .stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), false)
+
+    /** 1-based position of the current article in the deck, or null for bookmarks and Rabbit Holes. */
+    val deckPosition: StateFlow<Pair<Int, Int>?> = combine(deck, _state) { list, current ->
+        val title = (current as? ReaderUiState.Content)?.article?.title
+        val index = title?.let { t -> list.indexOfFirst { it.articleTitle.equals(t, ignoreCase = true) } } ?: -1
+        if (index >= 0) (index + 1) to list.size else null
+    }.stateIn(viewModelScope, SharingStarted.WhileSubscribed(5_000), null)
 
     /**
      * What's on screen now (title, fact id), so Prev / Next know where they are in the deck.
@@ -202,6 +211,7 @@ class ReaderViewModel(
 
     fun setFontSize(size: ReaderFontSize) = prefs.setFontSize(size)
     fun setTypeface(typeface: ReaderTypeface) = prefs.setTypeface(typeface)
+    fun toggleRefreshFlash() = prefs.setRefreshFlash(!prefs.refreshFlash.value)
 
     fun bookmarkTo(folderId: Long) {
         val article = (state.value as? ReaderUiState.Content)?.article ?: return

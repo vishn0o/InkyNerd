@@ -5,7 +5,7 @@ An Android app that turns niche Wikipedia trivia and nerdy facts into a home-scr
 ## Features
 
 - **Home-screen widget** with three sizes (standard 4×2, compact 3×2, large 4×3) and five visual styles: E-ink, Swiss, Glass, Dot, and Almanac. Tap to cycle topics or advance to the next fact; swipe-to-refresh support is built in.
-- **Reader** with "rabbit hole" navigation through linked articles, back/forward history that survives process death, and an offline archive.
+- **Reader** with a distraction-free E-Ink layout, per-article reading position, progress and reading-time estimates, an optional refresh flash, six bundled typefaces, "rabbit hole" navigation through linked articles, back/forward history that survives process death, and an offline archive.
 - **Bookmarks and folders** — save facts from the widget or the reader and organize them into folders.
 - **Quizzes** — ranked and daily rounds backed by the fact archive.
 - **Offline-first** — facts are cached in Room and refreshed by a periodic WorkManager job (only when the battery is not low).
